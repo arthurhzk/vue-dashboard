@@ -37,7 +37,7 @@
           style="height: 100px"
         >
           <v-card-title class="text-h6 text-md-h5 text-lg-h4">
-            Dashboard
+            Dashboard 💰
           </v-card-title>
           <div class="border border-gray-300 rounded-md">
             <TheInput placeholder="Search..." type="text" variant="sign-input">

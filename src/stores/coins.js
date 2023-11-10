@@ -9,6 +9,7 @@ const useCoinsStore = defineStore("coins", {
       toCurrency: "",
       value: null,
       conversionResult: null,
+      loadingData: false,
     };
   },
   actions: {
@@ -46,11 +47,13 @@ const useCoinsStore = defineStore("coins", {
         },
       };
       try {
+        this.loadingData = true;
         const response = await axios.request(options);
         this.conversionResult = response.data;
       } catch (error) {
         console.error("Error in exchangeCoins:");
       }
+      this.loadingData = false;
     },
   },
 });
